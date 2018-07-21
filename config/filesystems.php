@@ -64,6 +64,11 @@ return [
             'url' => env('AWS_URL'),
         ],
 
+        'retropie' => [
+            'driver' => 'local',
+            'root' => env('RETROPIE_ROOT', '/opt/retropie'),
+        ]
+
     ],
 
 ];

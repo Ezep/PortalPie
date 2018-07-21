@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/psx', function () {
+    
+    $config = Storage::disk('retropie')->get('configs/psx/pcsx.cfg');
+    dd($config);
+
+});
