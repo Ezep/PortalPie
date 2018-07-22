@@ -67,7 +67,20 @@ return [
         'retropie' => [
             'driver' => 'local',
             'root' => env('RETROPIE_ROOT', '/opt/retropie'),
-        ]
+        ],
+
+        /*
+            @@FIXME
+            env() capitalizes camelcased routes.  
+            For example "RetroPie" to "Retropie".
+        */
+
+        'retropie-data'=> [
+            'driver' => 'local',
+            //'root' => env('RETROPIE_DATA_ROOT', '/home/$user/RetroPie'),
+            'root' => '/home/ezequiel/RetroPie',
+            'links' => 'skip' // Skips symlinks to prevent Exceptions
+        ],
 
     ],
 
